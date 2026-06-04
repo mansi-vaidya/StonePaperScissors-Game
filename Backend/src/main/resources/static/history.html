@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game History</title>
+</head>
+<body>
+
+<h2>Game History</h2>
+<button onclick="loadGames()">Load Games</button>
+
+<ul id="data"></ul>
+
+<script>
+function loadGames() {
+    fetch("http://localhost:8080/api/games")
+        .then(res => res.json())
+        .then(data => {
+            let list = document.getElementById("data");
+            list.innerHTML = "";
+
+            data.forEach(game => {
+                let li = document.createElement("li");
+                li.innerText = game.player1 + " vs " + game.player2 + " → Winner: " + game.finalWinner;
+                list.appendChild(li);
+            });
+        });
+}
+</script>
+
+</body>
+</html>
