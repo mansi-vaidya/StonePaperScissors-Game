@@ -143,6 +143,7 @@ http://localhost:8080/api/games
 
 ### Game Setup
 - Player name selection
+  ![Overview](./public/1.png)
 - Game mode selection
 
 ### Gameplay
