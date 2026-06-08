@@ -3,6 +3,7 @@
 
 import { useState, useCallback, useEffect, useRef } from "react"
 
+fetch("https://your-railway-backend.up.railway.app/api/games")
 const API_URL = "http://localhost:8080/api/games";
 
 import {
